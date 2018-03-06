@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Titre du document</title>
+    <title>Generator</title>
     <link rel="stylesheet" href="bulma/css/bulma.css" media="all">
     <link rel="stylesheet" href="css/styles.css" media="all">
   </head>
@@ -13,27 +13,70 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+      <img src="http://www.institutfrancais.es/wp-content/uploads/2017/09/logo-institut-francais-espagne.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
     </a>
 
     <div class="navbar-burger">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span>hello</span>
+      <span>1</span>
+      <span>2</span>
     </div>
   </div>
 </nav>
 
     <div class="container is-fluid">
+
       <div class="notification">
+       <section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Générateur 
+      </h1>
+      <h2 class="subtitle">
+        citation
+      </h2>
+    </div>
+  </div>
+</section>
+
+<div class="box has-text-centered">
+  
+   <a onclick="startQuote()" id="trigger" class="button is-primary">Générer une citation</a>
+</div>
+
         <div class="card">
           <div class="card-content">
-            <p class="title">
-              Welcome to the generator
-              <p class="subtitle is-1" id="start"></p>
-            </p>
-            <p class="subtitle">
-               <a onclick="startQuote()" id="trigger" class="button is-primary">Button</a>
+            
+            <p id="othor" class="title is-1 is-spaced">Auteur</p>
+            <!-- <p class="subtitle is-3">Subtitle 3</p> -->
+
+              <section class="hero is-primary is-bold">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 id="start" class="title">
+                      Votre citation ici :
+                    </h1>
+                    <h2 class="subtitle">
+                      Institut Français de Madrid
+                    </h2>
+                  </div>
+                </div>
+              </section>
+
+              <section class="hero is-info is-bold">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 id="traduce" class="title">
+                      Traduction
+                    </h1>
+                    <h2 class="subtitle">
+                      click por la traduction
+                    </h2>
+                  </div>
+                </div>
+              </section>
+              
             </p>
           </div>
           <footer class="card-footer">
@@ -55,15 +98,43 @@
     
       </div>
     </div>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Generator</strong> by <a href="https://jgthms.com">Théophile Vast</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>..
+      </p>
+    </div>
+  </div>
+</footer>
     
 
     <script type="text/javascript">
       var quotes =["a","b","c"];
+      var quotes2 = 
+      [
+      {fr : "La plume est la langue de l’âme", es :"La pluma es la lengua del alma", ot:"Miguel de Cervantes"},
+      {fr:"Celui qui veut intéresser les autres doit les provoquer",es:"El que quiere interesar a los demás tiene que provocarlos. ",ot:"Salvador Dali"},
+      {fr:"Dans chaque enfant il y a un artiste. Le problème est de savoir comment rester un artiste en grandissant.",es:"Todos los niños nacen artistas. El problema es cómo seguir siendo artistas al crecer.",ot:"Pablo Picasso"},
+      {fr:"Une femme est authentique quand elle ressemble à l’image qu’elle a rêvée d’elle-même.",es:"Una es más auténtica, mientras más se parece a lo que soñó de sí misma.",ot:"Pedro Almodóvar"},
+      {fr:"Je suis le désespéré, la parole sans écho, celui qui a tout eu, et qui a tout perdu.",es:"Soy el desesperado, la palabra sin ecos, el que lo perdió todo, y el que todo lo tuvo.",ot:"Pablo Neruda"},
+      {fr:"Apprendre à douter, c’est apprendre à penser. ",es:"Aprender a dudar es aprender a pensar",ot:"Octavio Paz"},
+      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
+      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
+      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
+      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
+
+      ]
+
       
       function startQuote() {
-        var x = quotes.length ;
-        var y = Math.floor((Math.random() * x) + 0);
-        document.getElementById("start").innerHTML = quotes [y];
+        var x = quotes2.length ;
+        var y = Math.floor((Math.random() * x) + 1);
+        document.getElementById("start").innerHTML = quotes2[y].fr;
+        document.getElementById("traduce").innerHTML = quotes2[y].es;
+        document.getElementById("othor").innerHTML = quotes2[y].ot;
       }
     </script>
   </body>
