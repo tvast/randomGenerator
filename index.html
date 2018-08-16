@@ -31,34 +31,31 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-        Générateur 
+        Les expressions françaises 
       </h1>
       <h2 class="subtitle">
-        citation
+        Traduite en Espagnol
       </h2>
     </div>
   </div>
 </section>
 
-<div class="box has-text-centered">
-  
-   <a onclick="startQuote()" id="trigger" class="button is-primary">Générer une citation</a>
-</div>
+
 
         <div class="card">
           <div class="card-content">
             
-            <p id="othor" class="title is-1 is-spaced">Auteur</p>
+            <p id="othor" class="title is-1 is-spaced">Proverbes  </p>
             <!-- <p class="subtitle is-3">Subtitle 3</p> -->
 
               <section class="hero is-primary is-bold">
                 <div class="hero-body">
                   <div class="container">
-                    <h1 id="start" class="title">
+                    <h1  class="title">
                       Votre citation ici :
                     </h1>
-                    <h2 class="subtitle">
-                      Institut Français de Madrid
+                    <h2 id="start" class="subtitle">
+                      
                     </h2>
                   </div>
                 </div>
@@ -67,15 +64,20 @@
               <section class="hero is-info is-bold">
                 <div class="hero-body">
                   <div class="container">
-                    <h1 id="traduce" class="title">
+                    <h1  class="title">
                       Traduction
                     </h1>
-                    <h2 class="subtitle">
-                      click por la traduction
+                    <h2 id="traduce" class="subtitle">
+                      
                     </h2>
                   </div>
                 </div>
               </section>
+
+              <div class="box has-text-centered">
+  
+   <a onclick="startQuote()" id="trigger" class="button is-primary">Générer une citation</a>
+</div>
               
             </p>
           </div>
@@ -115,26 +117,37 @@
       var quotes =["a","b","c"];
       var quotes2 = 
       [
-      {fr : "La plume est la langue de l’âme", es :"La pluma es la lengua del alma", ot:"Miguel de Cervantes"},
-      {fr:"Celui qui veut intéresser les autres doit les provoquer",es:"El que quiere interesar a los demás tiene que provocarlos. ",ot:"Salvador Dali"},
-      {fr:"Dans chaque enfant il y a un artiste. Le problème est de savoir comment rester un artiste en grandissant.",es:"Todos los niños nacen artistas. El problema es cómo seguir siendo artistas al crecer.",ot:"Pablo Picasso"},
-      {fr:"Une femme est authentique quand elle ressemble à l’image qu’elle a rêvée d’elle-même.",es:"Una es más auténtica, mientras más se parece a lo que soñó de sí misma.",ot:"Pedro Almodóvar"},
-      {fr:"Je suis le désespéré, la parole sans écho, celui qui a tout eu, et qui a tout perdu.",es:"Soy el desesperado, la palabra sin ecos, el que lo perdió todo, y el que todo lo tuvo.",ot:"Pablo Neruda"},
-      {fr:"Apprendre à douter, c’est apprendre à penser. ",es:"Aprender a dudar es aprender a pensar",ot:"Octavio Paz"},
-      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
-      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
-      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
-      {fr:"La plume est la langue de l’âme2",es:"La pluma es la lengua del alma2",ot:"Salvador Dali"},
+      {fr : "Etre sage comme une image", es :"Ser más bueno que el santo", ot:"Miguel de Cervantes"},
+      {fr:"Une histoire sans queue ni tête",es:"Una historia sin pies ni cabeza",ot:"Salvador Dali"},
+      {fr:"En un clin d’oeil",es:"En un abrir y cerrar de ojos",ot:"Pablo Picasso"},
+      {fr:"En avoir l’eau à la bouche",es:"Hacerse la boca agua",ot:"Pedro Almodóvar"},
+      {fr:"Filer à l’anglaise",es:"Irse a la francesa",ot:"Pablo Neruda"},
+      {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
+      {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
+      {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
+      {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
+      {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
+
+      {fr : "Avoir quelqu’un dans le nez", es :"No soportar a una persona", ot:"Miguel de Cervantes"},
+      {fr:"Perdre la face",es:"Perder la cara",ot:"Salvador Dali"},
+      {fr:"Faire d’une pierre, deux coups",es:"Matar dos pájaros de un tiro",ot:"Pablo Picasso"},
+      {fr:"Avoir du cran",es:"Tener las agallas",ot:"Pedro Almodóvar"},
+      {fr:"Ne pas être sorti de l’auberge",es:"No salimos de una que nos metemos en otra",ot:"Pablo Neruda"},
+      {fr:"Apprendre par coeur",es:"Saberse de memoria",ot:"Octavio Paz"},
+      {fr:"Passer une nuit blanche",es:"Pasar la noche en vela",ot:"Isabel Allende"},
+      {fr:"Aller comme un gant",es:"Encajar perfectamente",ot:"Frida Kahlo"},
+      {fr:"Etre comme un coq en pâte",es:"Tener una vida de reyes",ot:"Hemingway"},
+      {fr:"Ce n’est pas la mer à boire !",es:"No es para tanto !",ot:"Che Guevara"},
 
       ]
 
       
       function startQuote() {
         var x = quotes2.length ;
-        var y = Math.floor((Math.random() * x) + 1);
+        var y = Math.floor((Math.random() * x) + 0);
         document.getElementById("start").innerHTML = quotes2[y].fr;
         document.getElementById("traduce").innerHTML = quotes2[y].es;
-        document.getElementById("othor").innerHTML = quotes2[y].ot;
+        // document.getElementById("othor").innerHTML = quotes2[y].ot;
       }
     </script>
   </body>
